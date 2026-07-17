@@ -13,6 +13,6 @@ if __name__ == '__main__':
 
     passcards = Passcard.objects.all()
 
-    active_passcards = [card for card in passcards if card.is_active]
+    active_passcards = Passcard.objects.filter(is_active=True)
 
     print('Количество активных пропусков:', len(active_passcards))
